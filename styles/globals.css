@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clases CSS traducidas al español */
+
+/* Layout y posicionamiento */
+.relativo { @apply relative; }
+.absoluto { @apply absolute; }
+.fijo { @apply fixed; }
+.bloque { @apply block; }
+.en-linea-bloque { @apply inline-block; }
+.oculto { @apply hidden; }
+.flex-columna { @apply flex-col; }
+.flex-encoger-0 { @apply flex-shrink-0; }
+
+/* Nota: No podemos redefinir .flex porque crea dependencia circular 
+   Tailwind ya tiene esta utilidad */
+
+/* Centrado y justificación */
+.centrar-elementos { @apply items-center; }
+.justificar-centro { @apply justify-center; }
+.justificar-entre { @apply justify-between; }
+.justificar-fin { @apply justify-end; }
+.texto-centro { @apply text-center; }
+.elementos-inicio { @apply items-start; }
+
+/* Espaciado */
+.espacio-x-4 { @apply space-x-4; }
+.espacio-x-6 { @apply space-x-6; }
+.espacio-x-8 { @apply space-x-8; }
+.espacio-y-1 { @apply space-y-1; }
+
+/* Tamaños */
+.ancho-completo { @apply w-full; }
+.alto-completo { @apply h-full; }
+.alto-pantalla { @apply h-screen; }
+.alto-16 { @apply h-16; }
+.alto-4 { @apply h-4; }
+.alto-5 { @apply h-5; }
+.alto-6 { @apply h-6; }
+.alto-0\.5 { @apply h-0.5; }
+.alto-20 { @apply h-20; }
+.alto-24 { @apply h-24; }
+.alto-32 { @apply h-32; }
+.ancho-4 { @apply w-4; }
+.ancho-5 { @apply w-5; }
+.ancho-6 { @apply w-6; }
+.ancho-20 { @apply w-20; }
+.ancho-24 { @apply w-24; }
+.ancho-32 { @apply w-32; }
+
+/* Anchos máximos */
+.maximo-7xl { @apply max-w-7xl; }
+.maximo-ancho-2xl { @apply max-w-2xl; }
+.maximo-ancho-3xl { @apply max-w-3xl; }
+.maximo-ancho-md { @apply max-w-md; }
+
+/* Posiciones */
+.superior-20 { @apply top-20; }
+.superior-40 { @apply top-40; }
+.inferior-32 { @apply bottom-32; }
+.izquierda-10 { @apply left-10; }
+.izquierda-1\/4 { @apply left-1/4; }
+.derecha-20 { @apply right-20; }
+
+/* Z-index */
+.capa-0 { @apply z-0; }
+.capa-10 { @apply z-10; }
+.capa-50 { @apply z-50; }
+.-capa-10 { @apply -z-10; }
+
+/* Colores de fondo */
+.fondo-negro { @apply bg-black; }
+.fondo-blanco { @apply bg-white; }
+.fondo-verde-600 { @apply bg-green-600; }
+.fondo-verde-700 { @apply bg-green-700; }
+.fondo-gris-800 { @apply bg-gray-800; }
+.fondo-opacidad-90 { @apply bg-opacity-90; }
+
+/* Gradientes */
+.fondo-gradiente-a-r { @apply bg-gradient-to-r; }
+.fondo-gradiente-a-br { @apply bg-gradient-to-br; }
+.desde-azul-500\/20 { @apply from-blue-500/20; }
+.desde-verde-400\/20 { @apply from-green-400/20; }
+.desde-rosa-400\/20 { @apply from-pink-400/20; }
+.desde-azul-600 { @apply from-blue-600; }
+.desde-azul-400 { @apply from-blue-400; }
+.desde-transparente { @apply from-transparent; }
+.hasta-purpura-600\/20 { @apply to-purple-600/20; }
+.hasta-verde-azul-500\/20 { @apply to-teal-500/20; }
+.hasta-rojo-500\/20 { @apply to-red-500/20; }
+.hasta-rosa-600 { @apply to-pink-600; }
+.hasta-azul-400 { @apply to-blue-400; }
+.hasta-transparente { @apply to-transparent; }
+.via-purpura-600 { @apply via-purple-600; }
+.via-purpura-500 { @apply via-purple-500; }
+.via-rosa-500 { @apply via-pink-500; }
+.via-blanco { @apply via-white; }
+.via-purpura-600\/30 { @apply via-purple-600/30; }
+.via-purpura-500\/50 { @apply via-purple-500/50; }
+
+/* Colores de texto */
+.texto-blanco { @apply text-white; }
+.texto-gris-700 { @apply text-gray-700; }
+.texto-gris-300 { @apply text-gray-300; }
+.texto-gris-400 { @apply text-gray-400; }
+.texto-gris-600 { @apply text-gray-600; }
+.texto-gris-900 { @apply text-gray-900; }
+.texto-verde-600 { @apply text-green-600; }
+.texto-transparente { @apply text-transparent; }
+
+/* Tamaños de texto */
+.texto-sm { @apply text-sm; }
+.texto-lg { @apply text-lg; }
+.texto-xl { @apply text-xl; }
+.texto-2xl { @apply text-2xl; }
+.texto-4xl { @apply text-4xl; }
+.texto-5xl { @apply text-5xl; }
+.texto-6xl { @apply text-6xl; }
+.texto-7xl { @apply text-7xl; }
+.texto-8xl { @apply text-8xl; }
+.texto-9xl { @apply text-9xl; }
+
+/* Pesos de fuente */
+.fuente-medio { @apply font-medium; }
+.fuente-seminegrita { @apply font-semibold; }
+.fuente-negrita { @apply font-bold; }
+.fuente-negro { @apply font-black; }
+.fuente-ligera { @apply font-light; }
+
+/* Efectos de hover */
+.hover\:texto-gris-300:hover { @apply text-gray-300; }
+.hover\:texto-gris-600:hover { @apply text-gray-600; }
+.hover\:texto-verde-600:hover { @apply text-green-600; }
+.hover\:texto-azul-400:hover { @apply text-blue-400; }
+.hover\:texto-rosa-400:hover { @apply text-pink-400; }
+.hover\:texto-azul-500:hover { @apply text-blue-500; }
+.hover\:fondo-verde-700:hover { @apply bg-green-700; }
+
+/* Bordes */
+.borde { @apply border; }
+.borde-2 { @apply border-2; }
+.borde-t { @apply border-t; }
+.borde-gris-200 { @apply border-gray-200; }
+.borde-gris-300 { @apply border-gray-300; }
+.borde-gris-700 { @apply border-gray-700; }
+
+/* Redondeado */
+.redondeado-lg { @apply rounded-lg; }
+.redondeado-l-lg { @apply rounded-l-lg; }
+.redondeado-r-lg { @apply rounded-r-lg; }
+.redondeado-completo { @apply rounded-full; }
+
+/* Sombras */
+.sombra-lg { @apply shadow-lg; }
+.sombra-2xl { @apply shadow-2xl; }
+
+/* Enfoque */
+.enfoque\:contorno-ninguno:focus { @apply outline-none; }
+.enfoque\:borde-verde-500:focus { @apply border-green-500; }
+
+/* Opacidad */
+.opacidad-10 { @apply opacity-10; }
+
+/* Desbordamiento */
+.desbordamiento-oculto { @apply overflow-hidden; }
+
+/* Desenfoque */
+.desenfoque-lg { @apply blur-lg; }
+.desenfoque-xl { @apply blur-xl; }
+.desenfoque-3xl { @apply blur-3xl; }
+.desenfoque-fondo-md { @apply backdrop-blur-md; }
+
+/* Escalas */
+.escala-150 { @apply scale-150; }
+
+/* Transiciones */
+.transicion { @apply transition; }
+.transicion-todo { @apply transition-all; }
+.duracion-300 { @apply duration-300; }
+
+/* Guía y rastreo */
+.guia-ninguna { @apply leading-none; }
+.guia-relajada { @apply leading-relaxed; }
+.rastreo-mas-ajustado { @apply tracking-tighter; }
+.rastreo-mas-ancho { @apply tracking-wider; }
+
+/* Recorte de fondo */
+.fondo-recorte-texto { @apply bg-clip-text; }
+
+/* Cuadrícula */
+.cuadricula { @apply grid; }
+.cuadricula-cols-1 { @apply grid-cols-1; }
+.cuadricula-cols-3 { @apply grid-cols-3; }
+.brecha-8 { @apply gap-8; }
+
+/* Grupo - usando selector regular */
+.grupo { 
+  /* Clase grupo personalizada */ 
+}
+
+/* Más clases necesarias */
+.texto-verde-400 { @apply text-green-400; }
+.hover\:texto-verde-400:hover { @apply text-green-400; }
+.cuadricula-cols-4 { @apply grid-cols-4; }
+.fondo-gris-900 { @apply bg-gray-900; }
+
+/* Clases hover adicionales */
+.hover\:texto-gris-300:hover { @apply text-gray-300; }
+.hover\:texto-azul-400:hover { @apply text-blue-400; }
+.hover\:texto-rosa-400:hover { @apply text-pink-400; }
+.hover\:texto-azul-500:hover { @apply text-blue-500; }
+.hover\:fondo-verde-700:hover { @apply bg-green-700; }
+
+/* Espaciado Y */
+.espacio-y-1 { @apply space-y-1; }
+
+/* Bordes específicos */
+.borde-t { @apply border-t; }
+.borde-gris-200 { @apply border-gray-200; }
+.borde-gris-300 { @apply border-gray-300; }
+
+/* Redondeado específico */
+.redondeado-l-lg { @apply rounded-l-lg; }
+.redondeado-r-lg { @apply rounded-r-lg; }
+
+/* Focus states */
+.enfoque\:contorno-ninguno:focus { @apply outline-none; }
+.enfoque\:borde-verde-500:focus { @apply border-green-500; }
+
+/* Medias queries responsive */
+.md\:cuadricula-cols-3 { @apply md:grid-cols-3; }
+.md\:cuadricula-cols-4 { @apply md:grid-cols-4; }
+.md\:texto-xl { @apply md:text-xl; }
+.md\:texto-6xl { @apply md:text-6xl; }
+.md\:texto-8xl { @apply md:text-8xl; }
+.lg\:texto-7xl { @apply lg:text-7xl; }
+.lg\:texto-9xl { @apply lg:text-9xl; }
+.lg\:bloque { @apply lg:block; }
+.lg\:oculto { @apply lg:hidden; }
+
+/* Todas las clases necesarias ya están definidas arriba 
+   Nota: No redefinimos .lg:flex por dependencia circular */

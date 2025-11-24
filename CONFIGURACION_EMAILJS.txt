@@ -1,0 +1,208 @@
+===============================================================================
+                    CONFIGURACIÓN COMPLETA DE EMAILJS
+                     Para Itaca Comunicación - Chatbot
+===============================================================================
+
+📅 FECHA: 3 de Octubre 2025
+🎯 OBJETIVO: Configurar envío de emails reales desde el chatbot del sitio web
+
+===============================================================================
+                            PASO 1: CREAR CUENTA EN EMAILJS
+===============================================================================
+
+1. Ve a: https://www.emailjs.com/
+2. Haz clic en "Sign Up" (Registrarse)
+3. Regístrate con tu email empresarial (preferiblemente @itacacomunicacion.com)
+4. Verifica tu email
+5. Inicia sesión en tu cuenta
+
+NOTA: El plan gratuito permite hasta 200 emails por mes (suficiente para empezar)
+
+===============================================================================
+                         PASO 2: CONFIGURAR SERVICIO DE EMAIL
+===============================================================================
+
+1. En el dashboard, ve a "Email Services" (lado izquierdo)
+2. Haz clic en "Add Service"
+3. Selecciona tu proveedor de email:
+   
+   OPCIÓN A - GMAIL (Recomendado):
+   - Selecciona "Gmail" 
+   - Haz clic en "Connect Account"
+   - Autoriza el acceso a tu cuenta de Gmail
+   - EmailJS generará un Service ID automáticamente
+   
+   OPCIÓN B - OUTLOOK:
+   - Selecciona "Outlook"
+   - Conecta tu cuenta de Outlook/Hotmail
+   - Autoriza el acceso
+   
+   OPCIÓN C - OTRO PROVEEDOR:
+   - Selecciona "Other" y configura manualmente
+
+4. IMPORTANTE: Guarda el "Service ID" que aparece (ejemplo: service_abc123)
+
+===============================================================================
+                        PASO 3: CREAR PLANTILLA DE EMAIL
+===============================================================================
+
+1. En el dashboard, ve a "Email Templates"
+2. Haz clic en "Create New Template"
+3. Configura la plantilla así:
+
+   SUBJECT (Asunto):
+   {{tipo}} - {{nombre}} - Itaca Comunicación
+
+   CONTENT (Contenido del email):
+   Nuevo {{tipo}} recibido desde el sitio web:
+
+   INFORMACIÓN DEL CLIENTE:
+   - Nombre: {{nombre}}
+   - Email: {{email}}
+   - Teléfono: {{telefono}}
+   - Empresa: {{empresa}}
+
+   MENSAJE:
+   {{mensaje}}
+
+   DETALLES:
+   - Tipo de solicitud: {{tipo}}
+   - Fecha y hora: {{fecha}}
+
+   ---
+   Este mensaje fue enviado automáticamente desde el chatbot del sitio web.
+   Sitio: https://www.itacacomunicacion.com
+
+4. Haz clic en "Save"
+5. IMPORTANTE: Guarda el "Template ID" que aparece (ejemplo: template_xyz789)
+
+===============================================================================
+                          PASO 4: OBTENER PUBLIC KEY
+===============================================================================
+
+1. En el dashboard, ve a "Account" (lado izquierdo)
+2. Ve a la sección "General"
+3. Busca "Public Key" 
+4. IMPORTANTE: Copia la clave pública (ejemplo: abc123def456)
+
+===============================================================================
+                     PASO 5: ACTUALIZAR VARIABLES DE ENTORNO
+===============================================================================
+
+1. Abre el archivo: .env.local (en la raíz del proyecto)
+2. Encuentra estas líneas:
+
+   # EmailJS Configuration
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=tu_service_id_aqui
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=tu_template_id_aqui
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=tu_public_key_aqui
+
+3. Reemplaza con tus valores reales:
+
+   # EmailJS Configuration
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_abc123
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xyz789
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=abc123def456
+
+4. IMPORTANTE: NO uses comillas en los valores
+5. Guarda el archivo
+
+===============================================================================
+                            PASO 6: PROBAR EL SISTEMA
+===============================================================================
+
+1. Reinicia el servidor de desarrollo:
+   - Ctrl + C para detener
+   - npm run dev para iniciar de nuevo
+
+2. Ve al sitio web: http://localhost:3001
+
+3. Abre el chatbot y prueba:
+   - Escribe "agendar cita" 
+   - Llena el formulario completo
+   - Envía la solicitud
+   - Deberías recibir un email en tu cuenta
+
+4. Verifica también con "cotización" o "precio"
+
+===============================================================================
+                           VERIFICACIÓN Y SOLUCIÓN DE PROBLEMAS
+===============================================================================
+
+✅ VERIFICAR QUE TODO FUNCIONA:
+- [ ] Cuenta de EmailJS creada
+- [ ] Servicio de email conectado (Gmail/Outlook)
+- [ ] Plantilla de email configurada
+- [ ] Variables de entorno actualizadas
+- [ ] Servidor reiniciado
+- [ ] Formulario del chatbot funciona
+- [ ] Emails se reciben correctamente
+
+❌ SI HAY PROBLEMAS:
+
+PROBLEMA: "Error enviando email"
+SOLUCIÓN: 
+- Verifica que los IDs en .env.local sean correctos
+- Revisa que no haya espacios extra en las variables
+- Confirma que el servicio de email esté activo en EmailJS
+
+PROBLEMA: "No llegan los emails"
+SOLUCIÓN:
+- Revisa la carpeta de SPAM
+- Verifica que el email de envío esté autorizado
+- Confirma que la plantilla esté guardada correctamente
+
+PROBLEMA: "Template not found"
+SOLUCIÓN:
+- Verifica el Template ID en EmailJS dashboard
+- Copia exactamente el ID sin espacios
+
+===============================================================================
+                               CONFIGURACIÓN AVANZADA
+===============================================================================
+
+LIMITES DEL PLAN GRATUITO:
+- 200 emails por mes
+- 2 servicios de email
+- Plantillas ilimitadas
+
+PARA AUMENTAR LIMITE:
+- Plan Personal: $15/mes - 1,000 emails
+- Plan Business: $40/mes - 10,000 emails
+
+PERSONALIZACIÓN ADICIONAL:
+1. Puedes crear múltiples plantillas (una para citas, otra para cotizaciones)
+2. Agregar más campos al formulario
+3. Configurar auto-respuestas al cliente
+
+===============================================================================
+                                  CONTACTO DE SOPORTE
+===============================================================================
+
+Si tienes problemas:
+1. Documentación oficial: https://www.emailjs.com/docs/
+2. Soporte EmailJS: support@emailjs.com
+3. Desarrollador del chatbot: [Tu contacto aquí]
+
+===============================================================================
+                                NOTAS IMPORTANTES
+===============================================================================
+
+⚠️  SEGURIDAD:
+- Las variables NEXT_PUBLIC_ son visibles en el frontend
+- Esto es normal y seguro para EmailJS
+- El Public Key está diseñado para ser público
+
+⚠️  MANTENIMIENTO:
+- Revisa mensualmente el uso de emails
+- Actualiza las plantillas según necesidades
+- Mantén actualizadas las credenciales
+
+⚠️  BACKUP:
+- Guarda una copia de los IDs en lugar seguro
+- Exporta las plantillas regularmente
+
+===============================================================================
+ARCHIVO CREADO: 3 de Octubre 2025
+ESTADO: ✅ Código integrado, ⏳ Configuración EmailJS pendiente
+===============================================================================

@@ -1,0 +1,402 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id                  Int                  @id @default(autoincrement())
+  username            String               @unique
+  email               String               @unique
+  password            String
+  name                String?
+  role                String               @default("admin")
+  active              Boolean              @default(true)
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  avatar              String?
+  department          String?
+  hourlyRate          Float?
+  notifications       Json?
+  phone               String?
+  assets              Asset[]
+  assignedCampaigns   Campaign[]           @relation("AssignedCampaigns")
+  createdCampaigns    Campaign[]           @relation("CreatedCampaigns")
+  clients             Client[]
+  contracts           Contract[]
+  interactions        Interaction[]
+  invoices            Invoice[]
+  passwordResetTokens PasswordResetToken[]
+  sessions            Session[]
+  socialPosts         SocialPost[]
+  taskComments        TaskComment[]
+  assignedTasks       Task[]               @relation("AssignedTasks")
+  createdTasks        Task[]               @relation("CreatedTasks")
+  templates           Template[]
+
+  @@index([email])
+  @@index([username])
+  @@index([active])
+  @@index([role])
+  @@index([department])
+  @@map("admins")
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  adminId   Int
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  admin     Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@index([adminId])
+  @@index([expiresAt])
+  @@map("sessions")
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  company   String?
+  phone     String?
+  service   String
+  message   String
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+  @@index([service])
+  @@map("contacts")
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  adminId   Int
+  token     String   @unique
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  admin     Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@index([token])
+  @@index([adminId])
+  @@index([expiresAt])
+  @@map("password_reset_tokens")
+}
+
+model Client {
+  id            String           @id @default(cuid())
+  name          String
+  email         String           @unique
+  phone         String?
+  company       String?
+  website       String?
+  address       String?
+  city          String?
+  country       String?          @default("México")
+  status        String           @default("prospecto")
+  priority      String           @default("media")
+  source        String?
+  industry      String?
+  monthlyBudget Float?
+  totalRevenue  Float            @default(0)
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+  lastContactAt DateTime?
+  nextFollowUp  DateTime?
+  assignedToId  Int?
+  campaigns     ClientCampaign[]
+  assignedTo    Admin?           @relation(fields: [assignedToId], references: [id])
+  contracts     Contract[]
+  interactions  Interaction[]
+  invoices      Invoice[]
+  tasks         Task[]
+
+  @@index([status])
+  @@index([priority])
+  @@index([assignedToId])
+  @@index([createdAt])
+  @@index([nextFollowUp])
+  @@map("clients")
+}
+
+model Interaction {
+  id          String    @id @default(cuid())
+  clientId    String
+  adminId     Int
+  type        String
+  subject     String
+  description String
+  outcome     String?
+  duration    Int?
+  attachments Json?
+  scheduledAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  admin       Admin     @relation(fields: [adminId], references: [id])
+  client      Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+
+  @@index([clientId])
+  @@index([adminId])
+  @@index([type])
+  @@index([createdAt])
+  @@map("interactions")
+}
+
+model Campaign {
+  id             String           @id @default(cuid())
+  name           String
+  description    String?
+  type           String
+  status         String           @default("planificacion")
+  budget         Float?
+  startDate      DateTime?
+  endDate        DateTime?
+  objective      String?
+  targetAudience String?
+  expectedROI    Float?
+  impressions    Int              @default(0)
+  clicks         Int              @default(0)
+  conversions    Int              @default(0)
+  spend          Float            @default(0)
+  revenue        Float            @default(0)
+  platform       String?
+  campaignId     String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  createdById    Int
+  assignedToId   Int?
+  metrics        CampaignMetric[]
+  assignedTo     Admin?           @relation("AssignedCampaigns", fields: [assignedToId], references: [id])
+  createdBy      Admin            @relation("CreatedCampaigns", fields: [createdById], references: [id])
+  clients        ClientCampaign[]
+  posts          SocialPost[]
+  tasks          Task[]
+
+  @@index([status])
+  @@index([type])
+  @@index([createdById])
+  @@index([assignedToId])
+  @@index([startDate])
+  @@map("campaigns")
+}
+
+model ClientCampaign {
+  id         String   @id @default(cuid())
+  clientId   String
+  campaignId String
+  budget     Float?
+  roi        Float?
+  createdAt  DateTime @default(now())
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  client     Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+
+  @@unique([clientId, campaignId])
+  @@map("client_campaigns")
+}
+
+model CampaignMetric {
+  id          String   @id @default(cuid())
+  campaignId  String
+  date        DateTime
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+  conversions Int      @default(0)
+  spend       Float    @default(0)
+  revenue     Float    @default(0)
+  ctr         Float?
+  cpm         Float?
+  cpc         Float?
+  roas        Float?
+  createdAt   DateTime @default(now())
+  campaign    Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  @@unique([campaignId, date])
+  @@index([date])
+  @@map("campaign_metrics")
+}
+
+model SocialPost {
+  id           String    @id @default(cuid())
+  campaignId   String?
+  platform     String
+  content      String
+  mediaUrls    Json?
+  hashtags     String?
+  status       String    @default("borrador")
+  scheduledFor DateTime?
+  publishedAt  DateTime?
+  likes        Int       @default(0)
+  comments     Int       @default(0)
+  shares       Int       @default(0)
+  reach        Int       @default(0)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  createdById  Int
+  campaign     Campaign? @relation(fields: [campaignId], references: [id])
+  createdBy    Admin     @relation(fields: [createdById], references: [id])
+
+  @@index([platform])
+  @@index([status])
+  @@index([scheduledFor])
+  @@index([createdById])
+  @@map("social_posts")
+}
+
+model Task {
+  id             String        @id @default(cuid())
+  title          String
+  description    String?
+  type           String        @default("general")
+  priority       String        @default("media")
+  status         String        @default("pendiente")
+  dueDate        DateTime?
+  completedAt    DateTime?
+  estimatedHours Float?
+  actualHours    Float?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  assignedToId   Int?
+  createdById    Int
+  clientId       String?
+  campaignId     String?
+  comments       TaskComment[]
+  assignedTo     Admin?        @relation("AssignedTasks", fields: [assignedToId], references: [id])
+  campaign       Campaign?     @relation(fields: [campaignId], references: [id])
+  client         Client?       @relation(fields: [clientId], references: [id])
+  createdBy      Admin         @relation("CreatedTasks", fields: [createdById], references: [id])
+
+  @@index([status])
+  @@index([priority])
+  @@index([assignedToId])
+  @@index([dueDate])
+  @@map("tasks")
+}
+
+model TaskComment {
+  id        String   @id @default(cuid())
+  taskId    String
+  adminId   Int
+  content   String
+  createdAt DateTime @default(now())
+  admin     Admin    @relation(fields: [adminId], references: [id])
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+
+  @@index([taskId])
+  @@index([createdAt])
+  @@map("task_comments")
+}
+
+model Template {
+  id          String   @id @default(cuid())
+  name        String
+  type        String
+  category    String?
+  content     String
+  variables   Json?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdById Int
+  createdBy   Admin    @relation(fields: [createdById], references: [id])
+
+  @@index([type])
+  @@index([category])
+  @@map("templates")
+}
+
+model Asset {
+  id           String   @id @default(cuid())
+  name         String
+  type         String
+  category     String?
+  url          String
+  thumbnailUrl String?
+  fileSize     Int?
+  dimensions   Json?
+  tags         String?
+  description  String?
+  isApproved   Boolean  @default(false)
+  isPublic     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  uploadedById Int
+  uploadedBy   Admin    @relation(fields: [uploadedById], references: [id])
+
+  @@index([type])
+  @@index([category])
+  @@index([isApproved])
+  @@index([tags])
+  @@map("assets")
+}
+
+model Contract {
+  id           String    @id @default(cuid())
+  clientId     String
+  title        String
+  type         String    @default("servicio")
+  status       String    @default("borrador")
+  value        Float
+  currency     String    @default("MXN")
+  paymentTerms String?
+  startDate    DateTime?
+  endDate      DateTime?
+  signedAt     DateTime?
+  documentUrl  String?
+  signedDocUrl String?
+  notes        String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  createdById  Int
+  client       Client    @relation(fields: [clientId], references: [id])
+  createdBy    Admin     @relation(fields: [createdById], references: [id])
+  invoices     Invoice[]
+
+  @@index([status])
+  @@index([clientId])
+  @@map("contracts")
+}
+
+model Invoice {
+  id            String    @id @default(cuid())
+  clientId      String
+  contractId    String?
+  invoiceNumber String    @unique
+  description   String
+  subtotal      Float
+  tax           Float     @default(0)
+  total         Float
+  currency      String    @default("MXN")
+  status        String    @default("borrador")
+  issuedAt      DateTime?
+  dueAt         DateTime?
+  paidAt        DateTime?
+  pdfUrl        String?
+  notes         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  createdById   Int
+  client        Client    @relation(fields: [clientId], references: [id])
+  contract      Contract? @relation(fields: [contractId], references: [id])
+  createdBy     Admin     @relation(fields: [createdById], references: [id])
+
+  @@index([status])
+  @@index([clientId])
+  @@index([dueAt])
+  @@map("invoices")
+}
+
+model Setting {
+  id    String @id
+  value String
+
+  @@map("settings")
+}

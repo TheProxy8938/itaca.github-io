@@ -1,0 +1,10 @@
+echo "# Node
+node_modules/
+npm-debug.log*
+
+# Next.js
+.next/
+out/
+" > .gitignore
+
+/generated/prisma

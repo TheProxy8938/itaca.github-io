@@ -1,0 +1,50 @@
+{
+  "name": "marke-online",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "migrate:deploy": "prisma migrate deploy",
+    "migrate:dev": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:seed": "node scripts/setup-dilan.js",
+    "migrate:sqlite-to-supabase": "node scripts/migrate-sqlite-to-supabase.js"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@headlessui/react": "^1.7.17",
+    "@prisma/client": "^6.16.3",
+    "bcryptjs": "^3.0.2",
+    "chart.js": "^4.5.0",
+    "framer-motion": "^10.16.4",
+    "html2canvas": "^1.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^3.0.3",
+    "next": "^13.4.19",
+    "next-auth": "^4.23.1",
+    "nodemailer": "^6.10.1",
+    "prisma": "^6.16.2",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^18.2.0",
+    "sqlite3": "^5.1.7",
+    "tailwindcss": "^3.3.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/html2canvas": "^0.5.35",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.6.0",
+    "@types/nodemailer": "^7.0.2",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "typescript": "^5.2.2"
+  }
+}
