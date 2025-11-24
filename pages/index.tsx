@@ -61,7 +61,7 @@ const values = [
     description: "Una buena estrategia comienza con una idea bien dicha."
   },
   {
-    icon: "�",
+    icon: "🚀",
     title: "Creatividad",
     description: "Nos mueve con propósito para transformar sin perder el rumbo."
   },

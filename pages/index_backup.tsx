@@ -60,7 +60,7 @@ const values = [
     description: "Una buena estrategia comienza con una idea bien dicha."
   },
   {
-    icon: "�",
+    icon: "🚀",
     title: "Creatividad",
     description: "Nos mueve con propósito para transformar sin perder el rumbo."
   },
@@ -217,7 +217,9 @@ export default function Home() {
       };
     }
 
-        text: `🚨 **ATENCIÓN DE EMERGENCIAS 24/7**\n\n¡Entendemos que algunas situaciones requieren atención INMEDIATA!\n\n⚡ **RESPUESTA GARANTIZADA EN 15 MINUTOS:**\n• Notificación instantánea a especialistas\n• Equipo de respuesta rápida activado\n• Seguimiento continuo hasta resolución\n• Comunicación cada 30 minutos\n\n🔴 **SITUACIONES DE EMERGENCIA:**\n• Sitio web caído o comprometido\n• Crisis de reputación online\n• Campañas publicitarias problemáticas\n• Pérdida de datos críticos\n• Problemas de seguridad digital\n• Ataques de hackeo o malware\n\n� **Para activar el protocolo de emergencia**, completa el formulario rápido con los detalles de tu situación.`,
+    if (text.includes('emergencia') || text.includes('urgente') || text.includes('24/7')) {
+      return {
+        text: `🚨 **ATENCIÓN DE EMERGENCIAS 24/7**\n\n¡Entendemos que algunas situaciones requieren atención INMEDIATA!\n\n⚡ **RESPUESTA GARANTIZADA EN 15 MINUTOS:**\n• Notificación instantánea a especialistas\n• Equipo de respuesta rápida activado\n• Seguimiento continuo hasta resolución\n• Comunicación cada 30 minutos\n\n🔴 **SITUACIONES DE EMERGENCIA:**\n• Sitio web caído o comprometido\n• Crisis de reputación online\n• Campañas publicitarias problemáticas\n• Pérdida de datos críticos\n• Problemas de seguridad digital\n• Ataques de hackeo o malware\n\n⚡ **Para activar el protocolo de emergencia**, completa el formulario rápido con los detalles de tu situación.`,
         quickReplies: ['📋 Formulario de Emergencia', 'Llamar AHORA', 'WhatsApp Directo'],
         showForm: text.includes('📋 formulario de emergencia'),
         formType: 'emergencia'
