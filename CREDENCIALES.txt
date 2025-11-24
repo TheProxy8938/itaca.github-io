@@ -10,18 +10,27 @@
 ═══════════════════════════════════════════════════════════════════════════
 
 PROYECTO: itacacommunicacion
-URL: https://app.supabase.com/project/mcmoueklnejwtlzenvee
+URL: https://app.supabase.com/project/kkgvlipccqtfwldbnzeq
 
 CONNECTION STRING (Direct):
-DATABASE_URL="postgresql://postgres:itacacommunicacion@db.mcmoueklnejwtlzenvee.supabase.co:5432/postgres"
+DATABASE_URL="postgresql://postgres:-Proxy8938-@db.kkgvlipccqtfwldbnzeq.supabase.co:5432/postgres"
 
 CONNECTION POOLING (Para alto tráfico):
-DIRECT_URL="postgresql://postgres:itacacommunicacion@db.mcmoueklnejwtlzenvee.supabase.co:5432/postgres"
-DATABASE_URL="postgresql://postgres:itacacommunicacion@db.mcmoueklnejwtlzenvee.supabase.co:6543/postgres?pgbouncer=true"
+DIRECT_URL="postgresql://postgres:-Proxy8938-@db.kkgvlipccqtfwldbnzeq.supabase.co:5432/postgres"
+DATABASE_URL="postgresql://postgres:-Proxy8938-@db.kkgvlipccqtfwldbnzeq.supabase.co:6543/postgres?pgbouncer=true"
 
 ═══════════════════════════════════════════════════════════════════════════
                     👤 USUARIOS ADMINISTRADORES
 ═══════════════════════════════════════════════════════════════════════════
+
+ADMIN DEFAULT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Username: admin
+Email: admin@itacacomunicacion.com
+Password: admin123
+Role: admin
+Department: administración
+Login URL: http://localhost:3000/login
 
 DILAN HERNANDEZ (Superadmin - Chat Personal)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -31,12 +40,6 @@ Password: Proxy-8938
 Role: superadmin
 Department: dirección
 Chat Personal: http://localhost:3000/personal/chat (después del login)
-
-ADMIN DEFAULT (Si se necesita crear)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Username: admin
-Email: admin@itacacomunicacion.com
-Password: admin123 (CAMBIAR DESPUÉS DEL PRIMER LOGIN)
 
 ═══════════════════════════════════════════════════════════════════════════
                     📧 EMAILJS CONFIGURACIÓN
@@ -93,7 +96,8 @@ https://www.tudominio.com/personal/chat    - Chat personal de Dilan
 SUPABASE:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Dashboard: https://app.supabase.com/
-Proyecto: https://app.supabase.com/project/mcmoueklnejwtlzenvee
+Proyecto: https://app.supabase.com/project/kkgvlipccqtfwldbnzeq
+Project URL: https://kkgvlipccqtfwldbnzeq.supabase.co
 Status: https://status.supabase.com/
 
 VERCEL (Si se usa):
