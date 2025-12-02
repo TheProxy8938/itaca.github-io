@@ -1,18 +1,18 @@
 {
-  "name": "marke-online",
-  "version": "0.1.0",
+  "name": "itaca-crm",
+  "version": "1.0.0",
   "private": true,
+  "description": "Sistema CRM y sitio web para Itaca Comunicación",
+  "author": "Itaca Comunicación",
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
-    "migrate:deploy": "prisma migrate deploy",
-    "migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
-    "db:seed": "node scripts/setup-dilan.js",
-    "migrate:sqlite-to-supabase": "node scripts/migrate-sqlite-to-supabase.js"
+    "db:seed": "node scripts/seed-complete-database.js",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -31,7 +31,6 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^18.2.0",
-    "sqlite3": "^5.1.7",
     "tailwindcss": "^3.3.3",
     "xlsx": "^0.18.5"
   },

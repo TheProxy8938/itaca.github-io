@@ -22,6 +22,9 @@ build/
 # Prisma
 prisma/generated/
 generated/prisma/
+prisma/prisma/
+*.db
+*.db-journal
 
 # Logs
 logs
@@ -36,3 +39,13 @@ debug.log
 
 # OS files
 Thumbs.db
+
+# Documentación temporal
+CREDENCIALES.txt
+*.backup
+*.backup.*
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-*
