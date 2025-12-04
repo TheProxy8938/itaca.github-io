@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+﻿import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -436,47 +436,47 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
       {/* Contenido principal */}
-      <div className="relativo capa-10">
+      <div className="relative z-10">
         {/* Top Navigation Bar */}
-        <nav className="fondo-negro texto-blanco py-2 oculto lg:bloque">
-          <div className="maximo-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justificar-entre centrar-elementos texto-sm">
-              <div className="flex centrar-elementos espacio-x-6">
-                <div className="flex centrar-elementos">
-                  <svg className="alto-4 ancho-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <nav className="bg-black text-white py-2 hidden lg:block">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center text-sm">
+              <div className="flex items-center space-x-6">
+                <div className="flex items-center">
+                  <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                   </svg>
-                  <a href="mailto:info@itacacomunicacion.com" className="hover:texto-gris-300 transicion">
+                  <a href="mailto:info@itacacomunicacion.com" className="hover:text-gray-300 transition">
                     info@itacacomunicacion.com
                   </a>
                 </div>
-                <div className="flex centrar-elementos">
-                  <svg className="alto-4 ancho-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center">
+                  <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                   </svg>
-                  <a href="tel:+57-123-456-7890" className="hover:texto-gris-300 transicion">
+                  <a href="tel:+57-123-456-7890" className="hover:text-gray-300 transition">
                     +52 442 186 7170
                   </a>
                 </div>
               </div>
-              <div className="flex centrar-elementos espacio-x-4">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:texto-azul-400 transicion">
+              <div className="flex items-center space-x-4">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:texto-rosa-400 transicion">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C3.85 14.724 3.226 13.314 3.226 11.987c0-1.327.624-2.737 1.9-3.704.875-.807 2.026-1.297 3.323-1.297 1.297 0 2.448.49 3.323 1.297 1.276.967 1.9 2.377 1.9 3.704 0 1.327-.624 2.737-1.9 3.704-.875.807-2.026 1.297-3.323 1.297zm7.718-9.522a1.29 1.29 0 01-1.29-1.29 1.29 1.29 0 012.58 0c0 .713-.577 1.29-1.29 1.29z"/>
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:texto-azul-500 transicion">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 transition">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:texto-azul-400 transicion">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                   </svg>
@@ -487,41 +487,41 @@ export default function Home() {
         </nav>
 
         {/* Main Navigation */}
-        <nav className="fondo-blanco sombra-lg relativo">
-          <div className="maximo-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justificar-entre centrar-elementos alto-16">
+        <nav className="bg-white shadow-lg relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
               {/* Logo */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="flex-encoger-0"
+                className="flex-shrink-0"
               >
                 <Link href="/">
-                  <span className="texto-2xl fuente-negrita texto-verde-600">ÍTACA</span>
+                  <span className="text-2xl font-bold text-green-600">ÍTACA</span>
                 </Link>
               </motion.div>
 
               {/* Desktop Navigation */}
-              <div className="oculto lg:flex centrar-elementos espacio-x-8">
-                <Link href="/" className="texto-gris-700 hover:texto-verde-600 transicion fuente-medio">
+              <div className="hidden lg:flex items-center space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-green-600 transition font-medium">
                   Inicio
                 </Link>
-                <Link href="/nosotros" className="texto-gris-700 hover:texto-verde-600 transicion fuente-medio">
+                <Link href="/nosotros" className="text-gray-700 hover:text-green-600 transition font-medium">
                   Nosotros
                 </Link>
-                <Link href="/servicios" className="texto-gris-700 hover:texto-verde-600 transicion fuente-medio">
+                <Link href="/servicios" className="text-gray-700 hover:text-green-600 transition font-medium">
                   Servicios
                 </Link>
-                <Link href="/contacto" className="texto-gris-700 hover:texto-verde-600 transicion fuente-medio">
+                <Link href="/contacto" className="text-gray-700 hover:text-green-600 transition font-medium">
                   Contacto
                 </Link>
               </div>
 
               {/* Icons and Actions */}
-              <div className="flex centrar-elementos espacio-x-4">
+              <div className="flex items-center space-x-4">
                 {/* Login Button */}
-                <Link href="/login" className="oculto lg:bloque texto-gris-700 hover:texto-verde-600 transicion flex items-center space-x-2">
-                  <svg className="alto-5 ancho-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <Link href="/login" className="hidden lg:block text-gray-700 hover:text-green-600 transition flex items-center space-x-2">
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                   <span>Iniciar Sesión</span>
@@ -530,7 +530,7 @@ export default function Home() {
                 {/* Quote Button */}
                 <Link 
                   href="/contacto"
-                  className="oculto lg:bloque fondo-verde-600 texto-blanco px-4 py-2 redondeado-lg hover:fondo-verde-700 transicion fuente-medio"
+                  className="hidden lg:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition font-medium"
                 >
                   Cotizar
                 </Link>
@@ -538,9 +538,9 @@ export default function Home() {
                 {/* Mobile Menu Button */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="lg:oculto texto-gris-700 hover:texto-verde-600"
+                  className="lg:hidden text-gray-700 hover:text-green-600"
                 >
-                  <svg className="alto-6 ancho-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isMobileMenuOpen ? (
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     ) : (
@@ -557,25 +557,25 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="lg:oculto fondo-blanco borde-t borde-gris-200"
+                className="lg:hidden bg-white border-t border-gray-200"
               >
-                <div className="px-2 pt-2 pb-3 espacio-y-1">
+                <div className="px-2 pt-2 pb-3 space-y-1">
 
-                  <Link href="/" className="bloque px-3 py-2 texto-gris-700 hover:texto-verde-600 fuente-medio">
+                  <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-green-600 font-medium">
                     Inicio
                   </Link>
-                  <Link href="/nosotros" className="bloque px-3 py-2 texto-gris-700 hover:texto-verde-600 fuente-medio">
+                  <Link href="/nosotros" className="block px-3 py-2 text-gray-700 hover:text-green-600 font-medium">
                     Nosotros
                   </Link>
-                  <Link href="/servicios" className="bloque px-3 py-2 texto-gris-700 hover:texto-verde-600 fuente-medio">
+                  <Link href="/servicios" className="block px-3 py-2 text-gray-700 hover:text-green-600 font-medium">
                     Servicios
                   </Link>
-                  <Link href="/contacto" className="bloque px-3 py-2 texto-gris-700 hover:texto-verde-600 fuente-medio">
+                  <Link href="/contacto" className="block px-3 py-2 text-gray-700 hover:text-green-600 font-medium">
                     Contacto
                   </Link>
                   <Link 
                     href="/contacto" 
-                    className="bloque mx-3 my-2 fondo-verde-600 texto-blanco px-4 py-2 redondeado-lg hover:fondo-verde-700 texto-centro fuente-medio"
+                    className="block mx-3 my-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-center font-medium"
                   >
                     Cotizar
                   </Link>
@@ -588,10 +588,10 @@ export default function Home() {
 
 
         {/* Banner Principal Vanguardista */}
-        <div className="flex flex-columna centrar-elementos justificar-centro alto-pantalla texto-centro px-4 relativo desbordamiento-oculto">
+        <div className="flex flex-col items-center justify-center h-screen text-center px-4 relative overflow-hidden">
           
           {/* Elementos de fondo vanguardistas */}
-          <div className="absoluto inset-0 capa-0">
+          <div className="absolute inset-0 z-0">
             {/* Esferas flotantes */}
             <motion.div
               animate={{ 
@@ -599,7 +599,7 @@ export default function Home() {
                 rotate: [0, 180, 360]
               }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="absoluto superior-20 izquierda-10 ancho-32 alto-32 fondo-gradiente-a-br desde-azul-500/20 hasta-purpura-600/20 redondeado-completo desenfoque-xl"
+              className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-full blur-xl"
             />
             <motion.div
               animate={{ 
@@ -608,7 +608,7 @@ export default function Home() {
                 rotate: [0, -180, -360]
               }}
               transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-              className="absoluto superior-40 derecha-20 ancho-24 alto-24 fondo-gradiente-a-br desde-verde-400/20 hasta-verde-azul-500/20 redondeado-completo desenfoque-lg"
+              className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-green-400/20 to-teal-500/20 rounded-full blur-lg"
             />
             <motion.div
               animate={{ 
@@ -617,12 +617,12 @@ export default function Home() {
                 scale: [1, 1.2, 1]
               }}
               transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-              className="absoluto inferior-32 izquierda-1/4 ancho-20 alto-20 fondo-gradiente-a-br desde-rosa-400/20 hasta-rojo-500/20 redondeado-completo desenfoque-lg"
+              className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-br from-teal-400/20 to-green-500/20 rounded-full blur-lg"
             />
             
             {/* Grid de líneas futuristas */}
-            <div className="absoluto inset-0 opacidad-10">
-              <div className="alto-completo ancho-completo" 
+            <div className="absolute inset-0 opacity-10">
+              <div className="h-full w-full" 
                 style={{
                   backgroundImage: `
                     linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
@@ -635,28 +635,30 @@ export default function Home() {
           </div>
 
           {/* Contenido principal */}
-          <div className="relativo capa-10">
+          <div className="relative z-10">
             {/* Título principal con efectos vanguardistas */}
             <motion.div
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
-              className="relativo mb-12"
+              className="relative mb-12"
             >
-              {/* Efecto de resplandor detrás del texto */}
-              <div className="absoluto inset-0 fondo-gradiente-a-r desde-azul-500/30 via-purpura-600/30 hasta-rosa-500/30 desenfoque-3xl escala-150 -capa-10" />
+              {/* Efecto de resplandor verde detrás del texto */}
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 via-emerald-400/40 to-teal-500/40 blur-3xl scale-150 -z-10" />
               
-              <h1 className="texto-5xl md:texto-8xl lg:texto-9xl fuente-negro texto-blanco mb-4 relativo">
-                <span className="bloque guia-ninguna rastreo-mas-ajustado">ÍTACA</span>
+              <h1 className="text-6xl md:text-9xl lg:text-[12rem] font-black text-white mb-16 relative">
                 <motion.span 
                   animate={{ 
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] 
+                    textShadow: [
+                      '0 0 30px rgba(34,197,94,0.6), 0 0 60px rgba(34,197,94,0.4)',
+                      '0 0 50px rgba(16,185,129,0.8), 0 0 90px rgba(16,185,129,0.5)',
+                      '0 0 30px rgba(34,197,94,0.6), 0 0 60px rgba(34,197,94,0.4)'
+                    ]
                   }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                  className="bloque texto-4xl md:texto-6xl lg:texto-7xl fondo-gradiente-a-r desde-azul-400 via-purpura-500 via-rosa-500 hasta-azul-400 texto-transparente fondo-recorte-texto guia-ninguna rastreo-mas-ancho fuente-ligera"
-                  style={{ backgroundSize: '200% 100%' }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="block leading-none tracking-tighter drop-shadow-2xl"
                 >
-                  Comunicación Estratégica
+                  ÍTACA
                 </motion.span>
               </h1>
               
@@ -665,20 +667,19 @@ export default function Home() {
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
-                className="alto-0.5 fondo-gradiente-a-r desde-transparente via-blanco hasta-transparente mx-auto maximo-ancho-md"
+                className="h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mx-auto max-w-md"
               />
             </motion.div>
 
-            {/* Tres conceptos clave */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            {/* Tres conceptos clave - Solo palabras */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 max-w-5xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-center"
               >
-                <h3 className="text-2xl font-bold text-yellow-400 mb-3">Estrategia</h3>
-                <p className="text-gray-300">Entendemos las necesidades únicas de tu negocio</p>
+                <h3 className="text-5xl md:text-6xl font-black text-green-400 tracking-tight">ESTRATEGIA</h3>
               </motion.div>
 
               <motion.div
@@ -687,8 +688,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className="text-center"
               >
-                <h3 className="text-2xl font-bold text-blue-400 mb-3">Reputación</h3>
-                <p className="text-gray-300">Creamos vínculos auténticos con tu audiencia</p>
+                <h3 className="text-5xl md:text-6xl font-black text-emerald-400 tracking-tight">REPUTACIÓN</h3>
               </motion.div>
 
               <motion.div
@@ -697,8 +697,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-center"
               >
-                <h3 className="text-2xl font-bold text-purple-400 mb-3">Audiencia</h3>
-                <p className="text-gray-300">Generamos impacto real en tu mercado objetivo</p>
+                <h3 className="text-5xl md:text-6xl font-black text-teal-400 tracking-tight">AUDIENCIA</h3>
               </motion.div>
             </div>
          
@@ -716,10 +715,10 @@ export default function Home() {
                 }}
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(96, 165, 250, 0.4)"
+                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="grupo relativo fondo-gradiente-a-r desde-azul-600 via-purpura-600 hasta-rosa-600 texto-blanco px-16 py-6 redondeado-completo texto-xl fuente-negrita desbordamiento-oculto transicion-todo duracion-300"
+                className="group relative bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white px-16 py-6 rounded-full text-xl font-bold overflow-hidden transition-todo duration-300"
               >
                 {/* Efecto de ondas en el botón */}
                 <motion.div
@@ -728,16 +727,16 @@ export default function Home() {
                     opacity: [0.7, 0, 0.7]
                   }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absoluto inset-0 fondo-gradiente-a-r desde-azul-400/50 via-purpura-500/50 hasta-rosa-500/50 redondeado-completo -capa-10"
+                  className="absolute inset-0 bg-gradient-to-r from-green-400/50 via-emerald-500/50 to-teal-500/50 rounded-full -z-10"
                 />
                 
-                <span className="relativo capa-10">Descubrir Servicios</span>
+                <span className="relative z-10">Descubrir Servicios</span>
                 
                 {/* Flecha animada */}
                 <motion.svg
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="en-linea-bloque ml-3 ancho-5 alto-5"
+                  className="inline-block ml-3 w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1133,7 +1132,7 @@ export default function Home() {
 
               <Link 
                 href="/contacto"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -1146,35 +1145,35 @@ export default function Home() {
 
 
         {/* Footer */}
-        <footer className="fondo-gris-900 texto-blanco">
-          <div className="maximo-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="cuadricula cuadricula-cols-1 md:cuadricula-cols-4 brecha-8">
+        <footer className="bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Información de la empresa */}
               <div className="md:col-span-1">
-                <h2 className="texto-2xl fuente-negrita texto-verde-400 mb-6 border-b-2 border-green-400 pb-3">
+                <h2 className="text-2xl font-bold text-green-400 mb-6 border-b-2 border-green-400 pb-3">
                   ÍTACA Comunicación
                 </h2>
-                <ul className="space-y-4 texto-gris-300">
-                  <li className="flex elementos-inicio">
-                    <svg className="alto-5 ancho-5 texto-verde-400 mr-3 mt-1 flex-encoger-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <ul className="space-y-4 text-gray-300">
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span>Querétaro, Mexico<br />Calle 1 #234</span>
                   </li>
-                  <li className="flex centrar-elementos">
-                    <svg className="alto-5 ancho-5 texto-verde-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    <a href="tel:+52-442-186-7170" className="hover:texto-verde-400 transicion">
+                    <a href="tel:+52-442-186-7170" className="hover:text-green-400 transition">
                       +52 442 186 7170
                     </a>
                   </li>
-                  <li className="flex centrar-elementos">
-                    <svg className="alto-5 ancho-5 texto-verde-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 7.89a2 2 0 002.82 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:info@itacacomunicacion.com" className="hover:texto-verde-400 transicion">
+                    <a href="mailto:info@itacacomunicacion.com" className="hover:text-green-400 transition">
                       info@itacacomunicacion.com
                     </a>
                   </li>
@@ -1255,13 +1254,13 @@ export default function Home() {
                     </div>
                     
                     <div id="quiz-result" className="hidden">
-                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4 text-white text-center">
+                      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg p-4 text-white text-center">
                         <div className="text-2xl mb-2">🎉</div>
                         <h4 className="font-bold mb-2" id="result-title">¡Perfecto!</h4>
                         <p className="text-sm mb-3" id="result-text"></p>
                         <Link 
                           href="/contacto"
-                          className="inline-block bg-white text-blue-600 px-4 py-2 rounded font-medium hover:bg-gray-100 transition text-sm"
+                          className="inline-block bg-white text-green-600 px-4 py-2 rounded font-medium hover:bg-gray-100 transition text-sm"
                         >
                           Solicitar Consulta Gratuita
                         </Link>
@@ -1315,7 +1314,7 @@ export default function Home() {
           />
           
           <motion.button
-            className="relative w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white shadow-2xl flex items-center justify-center overflow-hidden"
+            className="relative w-16 h-16 rounded-full bg-gradient-to-br from-green-600 via-emerald-600 to-teal-700 text-white shadow-2xl flex items-center justify-center overflow-hidden"
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsChatOpen(!isChatOpen)}
@@ -1363,8 +1362,8 @@ export default function Home() {
               className="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200"
             >
               {/* Header del chat */}
-              <div className="p-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-700/20"></div>
+              <div className="p-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700 text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-emerald-600/20 to-teal-700/20"></div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-full"></div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/5 rounded-full"></div>
                 
@@ -1412,7 +1411,7 @@ export default function Home() {
                       <div className={`flex ${message.isUser ? 'flex-row-reverse' : 'flex-row'} items-end space-x-2 max-w-[85%]`}>
                         
                         {!message.isUser && (
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
                             <span className="text-white text-xs font-bold">Í</span>
                           </div>
                         )}
@@ -1442,7 +1441,7 @@ export default function Home() {
                               ))}
                             </div>
 
-                            <div className={`mt-2 text-xs ${message.isUser ? 'text-blue-100' : 'text-gray-500'}`}>
+                            <div className={`mt-2 text-xs ${message.isUser ? 'text-green-100' : 'text-gray-500'}`}>
                               {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                             </div>
                           </div>
@@ -1462,7 +1461,7 @@ export default function Home() {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     onClick={() => handleQuickReply(reply)}
-                                    className="text-left p-3 bg-white border border-gray-300 rounded-lg hover:border-blue-400 hover:text-blue-600 transition-all text-sm font-medium shadow-sm"
+                                    className="text-left p-3 bg-white border border-gray-300 rounded-lg hover:border-green-400 hover:text-green-600 transition-all text-sm font-medium shadow-sm"
                                   >
                                     {reply}
                                   </motion.button>
@@ -1485,7 +1484,7 @@ export default function Home() {
                         className="sticky top-0 z-10 bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-4 shadow-lg"
                       >
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="font-bold text-blue-800 flex items-center space-x-2">
+                          <h4 className="font-bold text-green-800 flex items-center space-x-2">
                             <span>{chatFormType === 'agendar' ? '🗓️' : '📋'}</span>
                             <span>
                               {chatFormType === 'agendar' ? 'Formulario para Agendar Cita' : 'Formulario de Cotización'}
@@ -1496,7 +1495,7 @@ export default function Home() {
                               setShowChatForm(false);
                               setChatFormType('');
                             }} 
-                            className="text-blue-600 hover:text-blue-800 font-bold"
+                            className="text-green-600 hover:text-green-800 font-bold"
                           >
                             ✕
                           </button>
@@ -1621,7 +1620,7 @@ export default function Home() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     disabled={!chatInput.trim() || isTyping}
-                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 font-medium shadow-lg"
+                    className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl hover:from-green-700 hover:to-emerald-700 disabled:opacity-50 font-medium shadow-lg"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

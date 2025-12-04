@@ -6,13 +6,11 @@
   "author": "Itaca Comunicación",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
+    "build:static": "next build",
+    "export": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "prisma generate",
-    "db:push": "prisma db push",
-    "db:seed": "node scripts/seed-complete-database.js",
-    "db:studio": "prisma studio"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

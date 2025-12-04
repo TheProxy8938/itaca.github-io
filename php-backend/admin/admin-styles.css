@@ -1,0 +1,218 @@
+/* Estilos base para el panel de administración */
+:root {
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 70px;
+    --brand-green: #22c55e;
+    --sidebar-bg-start: #1e293b;
+    --sidebar-bg-end: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: #f5f5f5;
+    color: #1f2937;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: linear-gradient(180deg, var(--sidebar-bg-start) 0%, var(--sidebar-bg-end) 100%);
+    color: white;
+    padding-top: 0;
+    position: fixed;
+    inset: 0 auto 0 0;
+    overflow-y: auto;
+    box-shadow: 4px 0 12px rgba(15, 23, 42, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 1.75rem 1.5rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header h1 {
+    font-size: 1.65rem;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--brand-green);
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-header p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.02em;
+}
+
+.sidebar-nav {
+    padding: 1.25rem 0;
+    flex: 1;
+}
+
+.nav-section {
+    margin-bottom: 1.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1.5rem;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+}
+
+.nav-link svg {
+    width: 22px;
+    height: 22px;
+}
+
+.nav-link:hover {
+    background: rgba(148, 163, 184, 0.15);
+    color: #ffffff;
+    border-left-color: var(--brand-green);
+}
+
+.nav-link.active {
+    background: rgba(34, 197, 94, 0.15);
+    color: #d1fae5;
+    border-left-color: var(--brand-green);
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+}
+
+.user-role {
+    font-size: 0.85rem;
+    color: rgba(226, 232, 240, 0.75);
+}
+
+.btn-logout {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(248, 113, 113, 0.35);
+    background: rgba(248, 113, 113, 0.18);
+    color: #fecaca;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem 2.5rem;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: var(--sidebar-width-collapsed);
+    }
+
+    .main-content {
+        margin-left: var(--sidebar-width-collapsed);
+        padding: 1.25rem;
+    }
+
+    .sidebar-header h1,
+    .sidebar-header p,
+    .nav-link span,
+    .user-details,
+    .btn-logout {
+        display: none;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 0.85rem 0;
+    }
+
+    .nav-link svg {
+        margin: 0;
+    }
+}
+
+/* Utilidades */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background-color: rgba(148, 163, 184, 0.25);
+    color: #e2e8f0;
+}
+
+.table-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
