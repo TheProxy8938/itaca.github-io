@@ -83,6 +83,7 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
 
 
 
@@ -599,7 +600,7 @@ export default function Home() {
                 rotate: [0, 180, 360]
               }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-full blur-xl"
+              className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-full blur-xl"
             />
             <motion.div
               animate={{ 
@@ -608,7 +609,7 @@ export default function Home() {
                 rotate: [0, -180, -360]
               }}
               transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-              className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-green-400/20 to-teal-500/20 rounded-full blur-lg"
+              className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-lg"
             />
             <motion.div
               animate={{ 
@@ -617,7 +618,7 @@ export default function Home() {
                 scale: [1, 1.2, 1]
               }}
               transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-br from-teal-400/20 to-green-500/20 rounded-full blur-lg"
+              className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-br from-pink-400/20 to-purple-500/20 rounded-full blur-lg"
             />
             
             {/* Grid de líneas futuristas */}
@@ -643,8 +644,8 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
               className="relative mb-12"
             >
-              {/* Efecto de resplandor verde detrás del texto */}
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 via-emerald-400/40 to-teal-500/40 blur-3xl scale-150 -z-10" />
+              {/* Efecto de resplandor azul/morado detrás del texto */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 via-purple-400/40 to-pink-500/40 blur-3xl scale-150 -z-10" />
               
               <h1 className="text-6xl md:text-9xl lg:text-[12rem] font-black text-white mb-16 relative">
                 <motion.span 
@@ -679,7 +680,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-center"
               >
-                <h3 className="text-5xl md:text-6xl font-black text-green-400 tracking-tight">ESTRATEGIA</h3>
+                <h3 className="text-3xl md:text-4xl font-black text-yellow-400 tracking-tight">Estrategia</h3>
               </motion.div>
 
               <motion.div
@@ -688,7 +689,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className="text-center"
               >
-                <h3 className="text-5xl md:text-6xl font-black text-emerald-400 tracking-tight">REPUTACIÓN</h3>
+                <h3 className="text-3xl md:text-4xl font-black text-blue-400 tracking-tight">Reputación</h3>
               </motion.div>
 
               <motion.div
@@ -697,7 +698,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-center"
               >
-                <h3 className="text-5xl md:text-6xl font-black text-teal-400 tracking-tight">AUDIENCIA</h3>
+                <h3 className="text-3xl md:text-4xl font-black text-purple-400 tracking-tight">Audiencia</h3>
               </motion.div>
             </div>
          
@@ -715,10 +716,10 @@ export default function Home() {
                 }}
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.4)"
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white px-16 py-6 rounded-full text-xl font-bold overflow-hidden transition-todo duration-300"
+                className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-16 py-6 rounded-full text-xl font-bold overflow-hidden transition-todo duration-300"
               >
                 {/* Efecto de ondas en el botón */}
                 <motion.div
@@ -727,7 +728,7 @@ export default function Home() {
                     opacity: [0.7, 0, 0.7]
                   }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-gradient-to-r from-green-400/50 via-emerald-500/50 to-teal-500/50 rounded-full -z-10"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400/50 via-purple-500/50 to-pink-500/50 rounded-full -z-10"
                 />
                 
                 <span className="relative z-10">Descubrir Servicios</span>
@@ -770,7 +771,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 0 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 0 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(0)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <Image 
                   alt="Comunicación Estratégica"
@@ -812,7 +820,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 1 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 1 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(1)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/marketing.jpg"
@@ -851,7 +866,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 2 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 2 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(2)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/diseño.jpg"
@@ -890,7 +912,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 3 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 3 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(3)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/audiovisual.jpg"
@@ -929,7 +958,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 4 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 4 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(4)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/prensa.jpg"
@@ -968,7 +1004,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 5 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 5 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(5)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/comunicacion.jpg"
@@ -1007,7 +1050,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 6 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 6 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(6)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/comunicacion.jpg"
@@ -1046,7 +1096,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 7 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 7 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(7)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/comunicacion.jpg"
@@ -1085,7 +1142,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.8 }}
-                className="relative overflow-hidden rounded-xl p-8 hover:transform hover:scale-105 transition duration-300"
+                animate={{
+                  scale: hoveredService === null || hoveredService === 8 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 8 ? 1 : 0.4
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(8)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
                   src="/servicios/comunicacion.jpg"

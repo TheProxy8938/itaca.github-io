@@ -123,7 +123,7 @@ export default function Servicios() {
   return (
     <Layout title="Servicios - ÍTACA Comunicación Estratégica">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -170,7 +170,7 @@ export default function Servicios() {
                 className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group hover:shadow-xl transition-shadow cursor-pointer"
                 onClick={() => setSelectedService(service.id)}
               >
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
                   <div className="text-white text-6xl">
                     {service.id === 'marketing' && '📊'}
                     {service.id === 'comunicacion' && '💼'}
@@ -214,7 +214,7 @@ export default function Servicios() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
-                    <div className="h-64 lg:h-auto bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
+                    <div className="h-64 lg:h-auto bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
                       <div className="text-white text-8xl">
                         {service.id === 'marketing' && '📊'}
                         {service.id === 'comunicacion' && '💼'}
@@ -247,7 +247,7 @@ export default function Servicios() {
                       </div>
                       
                       <div className="flex justify-center">
-                        <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition">
+                        <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-full font-medium hover:from-green-700 hover:to-emerald-700 transition">
                           Solicitar Cotización
                         </button>
                       </div>
@@ -315,7 +315,7 @@ export default function Servicios() {
                 <button 
                   className={`w-full py-3 rounded-full font-medium transition ${
                     solution.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
                       : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                   }`}
                   onClick={() => window.location.href = '/contacto'}
@@ -361,7 +361,7 @@ export default function Servicios() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {process.step}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{process.title}</h3>
@@ -373,7 +373,7 @@ export default function Servicios() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

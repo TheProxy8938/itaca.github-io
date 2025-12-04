@@ -66,7 +66,7 @@ export default function Nosotros() {
   return (
     <Layout title="Nosotros - ÍTACA Comunicación Estratégica">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -122,7 +122,7 @@ export default function Nosotros() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 h-96 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8 h-96 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🚀</div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">8+ Años</h3>
@@ -160,7 +160,7 @@ export default function Nosotros() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-1">
+              <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl p-1">
                 <div className="bg-white rounded-xl p-8 h-full">
                   <div className="text-center">
                     {/* Foto del fundador */}
@@ -293,7 +293,7 @@ export default function Nosotros() {
                 </div>
 
                 {/* Quote inspiracional */}
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border-l-4 border-blue-500">
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border-l-4 border-green-500">
                   <blockquote className="text-lg font-medium text-gray-800 italic">
                     "Cuando emprendas tu viaje a Ítaca, pide que el camino sea largo, 
                     lleno de aventuras, lleno de experiencias..."
@@ -454,7 +454,7 @@ Inspirados en el poema de Kavafis, valoramos tanto el viaje como el destino. Por
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

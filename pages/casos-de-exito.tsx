@@ -111,7 +111,7 @@ const CasosDeExito = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -174,7 +174,7 @@ const CasosDeExito = () => {
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                   <div className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                      <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                         {case_.name.charAt(0)}
                       </div>
                       <div>
@@ -219,7 +219,7 @@ const CasosDeExito = () => {
                     </div>
 
                     <div className="mt-6 pt-4 border-t">
-                      <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all group-hover:shadow-lg">
+                      <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all group-hover:shadow-lg">
                         Ver Caso Completo
                       </button>
                     </div>
@@ -280,7 +280,7 @@ const CasosDeExito = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <section className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl">
+                  <section className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
                     <h3 className="text-lg font-bold text-gray-900 mb-3">Servicios Implementados</h3>
                     <ul className="space-y-2">
                       {selectedCase.services.map((service, idx) => (
@@ -323,7 +323,7 @@ const CasosDeExito = () => {
               <div className="mt-8 pt-6 border-t text-center">
                 <Link
                   href="/contacto"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -337,7 +337,7 @@ const CasosDeExito = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -82,7 +82,7 @@ export default function Contacto() {
   return (
     <Layout title="Contacto - ÍTACA Comunicación Estratégica">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -259,7 +259,7 @@ export default function Contacto() {
                     className={`w-full py-4 rounded-lg text-lg font-bold transition-colors shadow-lg ${
                       isSubmitting
                         ? 'bg-gray-400 cursor-not-allowed'
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                        : 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
                     }`}
                   >
                     {isSubmitting ? (
@@ -299,7 +299,7 @@ export default function Contacto() {
               <div className="space-y-6">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-100"
+                  className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100"
                 >
                   <div className="flex items-center mb-3">
                     <div className="bg-blue-500 text-white p-3 rounded-lg mr-4">
@@ -339,7 +339,7 @@ export default function Contacto() {
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-100"
+                  className="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-xl border border-emerald-100"
                 >
                   <div className="flex items-center mb-3">
                     <div className="bg-purple-500 text-white p-3 rounded-lg mr-4">
@@ -483,7 +483,7 @@ export default function Contacto() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
