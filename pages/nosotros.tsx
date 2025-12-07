@@ -10,22 +10,22 @@ const teamMembers = [
     image: "/equipo/dilan.jpg"
   },
   {
-    name: "TAMBIEN DILAN HERNANDEZ",
+    name: "Persona2",
     position: "Estratega Digital",
     description: "Experto en marketing digital y análisis de datos para optimizar campañas.",
-    image: "/equipo/dilan2.jpg"
+    image: "/equipo/persona.jpg"
   },
   {
-    name: "Ana Martínez",
+    name: "persona3z",
     position: "Directora de Cuentas",
     description: "Especialista en relaciones públicas y gestión de la reputación corporativa.",
-    image: "/team/ana.jpg"
+    image: "/equipo/persona3z.jpg"
   },
   {
-    name: "Diego Silva",
+    name: "oersona4",
     position: "Director de Producción",
     description: "Líder en producción audiovisual y contenido multimedia creativo.",
-    image: "/team/diego.jpg"
+    image: "/equipo/persona4.jpg"
   }
 ];
 

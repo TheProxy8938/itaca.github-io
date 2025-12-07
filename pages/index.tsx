@@ -773,7 +773,7 @@ export default function Home() {
                 transition={{ delay: 0 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 0 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 0 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 0 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(0)}
@@ -788,7 +788,7 @@ export default function Home() {
                   className="object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Comunicación Estratégica</h3>
                   <ul className="space-y-3">
@@ -812,6 +812,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
+                
               </motion.div>
 
               {/* Marketing Digital */}
@@ -822,7 +823,7 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 1 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 1 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 1 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(1)}
@@ -834,7 +835,7 @@ export default function Home() {
                   alt="Marketing Digital"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Marketing Digital</h3>
                   <ul className="space-y-3">
@@ -868,7 +869,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 2 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 2 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 2 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(2)}
@@ -880,7 +881,7 @@ export default function Home() {
                   alt="Diseño y Branding"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Diseño y Branding</h3>
                   <ul className="space-y-3">
@@ -914,7 +915,7 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 3 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 3 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 3 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(3)}
@@ -926,7 +927,7 @@ export default function Home() {
                   alt="Producción Audiovisual"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Producción Audiovisual</h3>
                   <ul className="space-y-3">
@@ -960,7 +961,7 @@ export default function Home() {
                 transition={{ delay: 0.4 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 4 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 4 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 4 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(4)}
@@ -972,7 +973,7 @@ export default function Home() {
                   alt="Relaciones Públicas"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Relaciones Públicas</h3>
                   <ul className="space-y-3">
@@ -1006,7 +1007,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 5 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 5 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 5 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(5)}
@@ -1018,7 +1019,7 @@ export default function Home() {
                   alt="Consultoría Estratégica"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Consultoría Estratégica</h3>
                   <ul className="space-y-3">
@@ -1052,7 +1053,7 @@ export default function Home() {
                 transition={{ delay: 0.6 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 6 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 6 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 6 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(6)}
@@ -1064,7 +1065,7 @@ export default function Home() {
                   alt="Eventos y Activaciones"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Eventos y Activaciones</h3>
                   <ul className="space-y-3">
@@ -1098,7 +1099,7 @@ export default function Home() {
                 transition={{ delay: 0.7 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 7 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 7 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 7 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(7)}
@@ -1110,7 +1111,7 @@ export default function Home() {
                   alt="Comunicación Institucional"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Comunicación Institucional</h3>
                   <ul className="space-y-3">
@@ -1144,7 +1145,7 @@ export default function Home() {
                 transition={{ delay: 0.8 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 8 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 8 ? 1 : 0.4
+                  opacity: hoveredService === null || hoveredService === 8 ? 1 : 0.3
                 }}
                 whileHover={{ scale: 1.08 }}
                 onMouseEnter={() => setHoveredService(8)}
@@ -1156,7 +1157,7 @@ export default function Home() {
                   alt="Investigación y Análisis"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-6">Investigación y Análisis</h3>
                   <ul className="space-y-3">
@@ -1177,6 +1178,101 @@ export default function Home() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                       Monitorización de tendencias y competencia
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Contenedor centrado para los últimos 2 servicios */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+              {/* Publicidad Impresa */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.9 }}
+                animate={{
+                  scale: hoveredService === null || hoveredService === 9 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 9 ? 1 : 0.3
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(9)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
+              >
+                <img 
+                  src="/servicios/diseño.jpg"
+                  alt="Publicidad Impresa"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-6">Publicidad Impresa</h3>
+                  <ul className="space-y-3">
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Folletos, volantes y tarjetas de presentación
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Banners personalizados de alta calidad
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Diseño y producción con entrega rápida
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              {/* Souvenires */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.0 }}
+                animate={{
+                  scale: hoveredService === null || hoveredService === 10 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 10 ? 1 : 0.3
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(10)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
+              >
+                <img 
+                  src="/servicios/marketing.jpg"
+                  alt="Souvenires"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-6">Souvenires</h3>
+                  <ul className="space-y-3">
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Tazas, llaveros, camisetas y bolsas personalizadas
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Artículos para eventos y promociones
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Regalos que fortalecen tu marca
                     </li>
                   </ul>
                 </div>

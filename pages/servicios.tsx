@@ -4,73 +4,124 @@ import { useState } from 'react';
 
 const services = [
   {
-    id: 'marketing',
-    title: 'Marketing Digital',
-    description: 'Estrategias integrales de marketing digital para maximizar tu presencia online y generar leads de calidad.',
-    image: '/servicios/marketing.jpg',
+    id: 'comunicacion-estrategica',
+    title: 'Comunicación Estratégica',
+    description: 'Diseño de planes integrales, auditorías de comunicación y gestión de crisis para fortalecer tu marca.',
+    image: '/servicios/comunicacion.jpg',
     features: [
-      'Estrategia de contenidos',
-      'Gestión de redes sociales', 
-      'Publicidad digital (Google Ads, Facebook Ads)',
-      'Email marketing',
-      'SEO y SEM',
-      'Analytics y reportes'
+      'Diseño de planes integrales de comunicación',
+      'Auditorías y diagnósticos de comunicación',
+      'Gestión de crisis y reputación'
     ]
   },
   {
-    id: 'comunicacion',
-    title: 'Comunicación Corporativa',
-    description: 'Desarrollamos estrategias de comunicación interna y externa que fortalecen la reputación de tu empresa.',
-    image: '/servicios/comunicacion.jpg',
+    id: 'marketing',
+    title: 'Marketing Digital',
+    description: 'Estrategias integrales de marketing digital, gestión profesional de redes sociales y campañas publicitarias efectivas.',
+    image: '/servicios/marketing.jpg',
     features: [
-      'Estrategia de comunicación integral',
-      'Comunicación interna',
-      'Relaciones públicas',
-      'Manejo de crisis',
-      'Comunicación de liderazgo',
-      'Newsletters corporativos'
+      'Estrategias integrales de marketing digital',
+      'Gestión profesional de redes sociales',
+      'Campañas publicitarias digitales'
     ]
   },
   {
     id: 'diseño',
     title: 'Diseño y Branding',
-    description: 'Creamos identidades visuales memorables que conectan emocionalmente con tu audiencia.',
+    description: 'Desarrollo de identidad visual corporativa, diseño de logotipos y manuales de marca profesionales.',
     image: '/servicios/diseño.jpg',
     features: [
-      'Desarrollo de identidad de marca',
-      'Diseño de logotipos',
-      'Manual de marca',
-      'Diseño gráfico',
-      'Packaging',
-      'Señalética corporativa'
+      'Desarrollo de identidad visual corporativa',
+      'Diseño de logotipos y tipografías',
+      'Manuales de marca y guías de estilo'
     ]
   },
   {
     id: 'audiovisual',
     title: 'Producción Audiovisual',
-    description: 'Contenido audiovisual de alta calidad que cuenta la historia de tu marca de manera impactante.',
+    description: 'Videos institucionales, fotografía corporativa y transmisiones en vivo profesionales.',
     image: '/servicios/audiovisual.jpg',
     features: [
-      'Videos corporativos',
-      'Spots publicitarios',
-      'Documentales empresariales',
-      'Fotografía comercial',
-      'Livestreaming',
-      'Motion graphics'
+      'Videos institucionales y promocionales',
+      'Fotografía corporativa y eventos',
+      'Transmisiones en vivo y streaming'
     ]
   },
   {
     id: 'prensa',
-    title: 'Relaciones con Medios',
-    description: 'Gestión estratégica de medios para amplificar tu mensaje y aumentar la visibilidad de tu marca.',
+    title: 'Relaciones Públicas',
+    description: 'Gestión de medios de comunicación, redacción de comunicados y organización de eventos.',
     image: '/servicios/prensa.jpg',
     features: [
-      'Estrategia de medios',
-      'Redacción de notas de prensa',
-      'Gestión de entrevistas',
-      'Monitoreo de medios',
-      'Crisis communication',
-      'Media training'
+      'Gestión de medios de comunicación',
+      'Redacción de comunicados de prensa',
+      'Organización de eventos mediáticos'
+    ]
+  },
+  {
+    id: 'consultoria',
+    title: 'Consultoría Estratégica',
+    description: 'Talleres de comunicación efectiva, coaching para portavoces y desarrollo de manuales de comunicación.',
+    image: '/servicios/comunicacion.jpg',
+    features: [
+      'Talleres de comunicación efectiva',
+      'Coaching para portavoces',
+      'Desarrollo de manuales de comunicación'
+    ]
+  },
+  {
+    id: 'eventos',
+    title: 'Eventos y Activaciones',
+    description: 'Planificación y ejecución de eventos corporativos, activaciones de marca y campañas experienciales.',
+    image: '/servicios/comunicacion.jpg',
+    features: [
+      'Planificación y ejecución de eventos corporativos',
+      'Activaciones de marca y campañas experienciales',
+      'Organización de webinars y seminarios'
+    ]
+  },
+  {
+    id: 'institucional',
+    title: 'Comunicación Institucional',
+    description: 'Campañas de difusión para entidades públicas, gestión de imagen para funcionarios y transparencia.',
+    image: '/servicios/comunicacion.jpg',
+    features: [
+      'Campañas de difusión para entidades públicas',
+      'Gestión de imagen para funcionarios',
+      'Transparencia y rendición de cuentas'
+    ]
+  },
+  {
+    id: 'investigacion',
+    title: 'Investigación y Análisis',
+    description: 'Estudios de mercado, análisis de percepción y reputación, y monitorización de tendencias.',
+    image: '/servicios/comunicacion.jpg',
+    features: [
+      'Estudios de mercado y públicos objetivos',
+      'Análisis de percepción y reputación',
+      'Monitorización de tendencias y competencia'
+    ]
+  },
+  {
+    id: 'publicidad-impresa',
+    title: 'Publicidad Impresa',
+    description: 'Folletos, volantes, tarjetas de presentación, banners personalizados y producción con entrega rápida.',
+    image: '/servicios/diseño.jpg',
+    features: [
+      'Folletos, volantes y tarjetas de presentación',
+      'Banners personalizados de alta calidad',
+      'Diseño y producción con entrega rápida'
+    ]
+  },
+  {
+    id: 'souvenires',
+    title: 'Souvenires',
+    description: 'Tazas, llaveros, camisetas y bolsas personalizadas, artículos para eventos y regalos que fortalecen tu marca.',
+    image: '/servicios/marketing.jpg',
+    features: [
+      'Tazas, llaveros, camisetas y bolsas personalizadas',
+      'Artículos para eventos y promociones',
+      'Regalos que fortalecen tu marca'
     ]
   }
 ];
@@ -172,11 +223,17 @@ export default function Servicios() {
               >
                 <div className="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
                   <div className="text-white text-6xl">
+                    {service.id === 'comunicacion-estrategica' && '💼'}
                     {service.id === 'marketing' && '📊'}
-                    {service.id === 'comunicacion' && '💼'}
                     {service.id === 'diseño' && '🎨'}
                     {service.id === 'audiovisual' && '🎬'}
                     {service.id === 'prensa' && '📰'}
+                    {service.id === 'consultoria' && '🎯'}
+                    {service.id === 'eventos' && '🎪'}
+                    {service.id === 'institucional' && '🏛️'}
+                    {service.id === 'investigacion' && '🔍'}
+                    {service.id === 'publicidad-impresa' && '📄'}
+                    {service.id === 'souvenires' && '🎁'}
                   </div>
                 </div>
                 
@@ -216,11 +273,17 @@ export default function Servicios() {
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="h-64 lg:h-auto bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
                       <div className="text-white text-8xl">
+                        {service.id === 'comunicacion-estrategica' && '💼'}
                         {service.id === 'marketing' && '📊'}
-                        {service.id === 'comunicacion' && '💼'}
                         {service.id === 'diseño' && '🎨'}
                         {service.id === 'audiovisual' && '🎬'}
                         {service.id === 'prensa' && '📰'}
+                        {service.id === 'consultoria' && '🎯'}
+                        {service.id === 'eventos' && '🎪'}
+                        {service.id === 'institucional' && '🏛️'}
+                        {service.id === 'investigacion' && '🔍'}
+                        {service.id === 'publicidad-impresa' && '📄'}
+                        {service.id === 'souvenires' && '🎁'}
                       </div>
                     </div>
                     

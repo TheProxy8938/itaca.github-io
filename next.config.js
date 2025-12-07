@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   
   // Configuración para exportación estática (GoDaddy hosting básico)
-  output: 'export', // Genera archivos HTML estáticos
+  // output: 'export', // Genera archivos HTML estáticos - Comentado para desarrollo local
   
   images: {
     unoptimized: true, // Necesario para export estático
