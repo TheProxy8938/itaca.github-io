@@ -521,7 +521,7 @@ export default function Home() {
               {/* Icons and Actions */}
               <div className="flex items-center space-x-4">
                 {/* Login Button */}
-                <Link href="/login" className="hidden lg:block text-gray-700 hover:text-green-600 transition flex items-center space-x-2">
+                <Link href="/login" className="hidden lg:flex text-gray-700 hover:text-green-600 transition items-center space-x-2">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
