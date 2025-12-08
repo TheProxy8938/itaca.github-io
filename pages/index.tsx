@@ -448,8 +448,8 @@ export default function Home() {
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                   </svg>
-                  <a href="mailto:info@itacacomunicacion.com" className="hover:text-gray-300 transition">
-                    info@itacacomunicacion.com
+                  <a href="mailto:ecabello@itaca-mx.com" className="hover:text-gray-300 transition">
+                    ecabello@itaca-mx.com
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -907,12 +907,104 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Producción Audiovisual */}
+              {/* Publicidad Impresa */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
+                animate={{
+                  scale: hoveredService === null || hoveredService === 9 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 9 ? 1 : 0.3
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(9)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
+              >
+                <img 
+                  src="/servicios/publicidad-impresa.jpg"
+                  alt="Publicidad Impresa"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-6">Publicidad Impresa</h3>
+                  <ul className="space-y-3">
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Folletos, volantes y tarjetas de presentación
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Banners personalizados de alta calidad
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Diseño y producción con entrega rápida
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              {/* Souvenires */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                animate={{
+                  scale: hoveredService === null || hoveredService === 10 ? 1 : 0.95,
+                  opacity: hoveredService === null || hoveredService === 10 ? 1 : 0.3
+                }}
+                whileHover={{ scale: 1.08 }}
+                onMouseEnter={() => setHoveredService(10)}
+                onMouseLeave={() => setHoveredService(null)}
+                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
+              >
+                <img 
+                  src="/servicios/souvenires.jpg"
+                  alt="Souvenires"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-6">Souvenires</h3>
+                  <ul className="space-y-3">
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Tazas, llaveros, camisetas y bolsas personalizadas
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Artículos para eventos y promociones
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Regalos que fortalecen tu marca
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              {/* Producción Audiovisual */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 3 ? 1 : 0.95,
                   opacity: hoveredService === null || hoveredService === 3 ? 1 : 0.3
@@ -958,7 +1050,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.6 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 4 ? 1 : 0.95,
                   opacity: hoveredService === null || hoveredService === 4 ? 1 : 0.3
@@ -999,12 +1091,12 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Consultoría Estratégica */}
+              {/* Consultoría */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.7 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 5 ? 1 : 0.95,
                   opacity: hoveredService === null || hoveredService === 5 ? 1 : 0.3
@@ -1015,13 +1107,13 @@ export default function Home() {
                 className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
-                  src="/servicios/comunicacion.jpg"
-                  alt="Consultoría Estratégica"
+                  src="/servicios/consultoria.jpg"
+                  alt="Consultoría"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-white mb-6">Consultoría Estratégica</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Consultoría</h3>
                   <ul className="space-y-3">
                     <li className="text-gray-300 flex items-center">
                       <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1050,7 +1142,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
+                transition={{ delay: 0.8 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 6 ? 1 : 0.95,
                   opacity: hoveredService === null || hoveredService === 6 ? 1 : 0.3
@@ -1061,7 +1153,7 @@ export default function Home() {
                 className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
-                  src="/servicios/comunicacion.jpg"
+                  src="/servicios/eventos.jpg"
                   alt="Eventos y Activaciones"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -1090,13 +1182,16 @@ export default function Home() {
                   </ul>
                 </div>
               </motion.div>
+            </div>
 
-              {/* Comunicación Institucional y Gubernamental */}
+            {/* Contenedor centrado para los últimos 2 servicios */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+              {/* Comunicación Institucional */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.7 }}
+                transition={{ delay: 0.9 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 7 ? 1 : 0.95,
                   opacity: hoveredService === null || hoveredService === 7 ? 1 : 0.3
@@ -1107,7 +1202,7 @@ export default function Home() {
                 className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
-                  src="/servicios/comunicacion.jpg"
+                  src="/servicios/institucional.jpg"
                   alt="Comunicación Institucional"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -1142,7 +1237,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.8 }}
+                transition={{ delay: 1.0 }}
                 animate={{
                   scale: hoveredService === null || hoveredService === 8 ? 1 : 0.95,
                   opacity: hoveredService === null || hoveredService === 8 ? 1 : 0.3
@@ -1153,7 +1248,7 @@ export default function Home() {
                 className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
-                  src="/servicios/comunicacion.jpg"
+                  src="/servicios/investigacion.jpg"
                   alt="Investigación y Análisis"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -1178,101 +1273,6 @@ export default function Home() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                       Monitorización de tendencias y competencia
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Contenedor centrado para los últimos 2 servicios */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-              {/* Publicidad Impresa */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.9 }}
-                animate={{
-                  scale: hoveredService === null || hoveredService === 9 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 9 ? 1 : 0.3
-                }}
-                whileHover={{ scale: 1.08 }}
-                onMouseEnter={() => setHoveredService(9)}
-                onMouseLeave={() => setHoveredService(null)}
-                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
-              >
-                <img 
-                  src="/servicios/diseño.jpg"
-                  alt="Publicidad Impresa"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-white mb-6">Publicidad Impresa</h3>
-                  <ul className="space-y-3">
-                    <li className="text-gray-300 flex items-center">
-                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Folletos, volantes y tarjetas de presentación
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Banners personalizados de alta calidad
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Diseño y producción con entrega rápida
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              {/* Souvenires */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 1.0 }}
-                animate={{
-                  scale: hoveredService === null || hoveredService === 10 ? 1 : 0.95,
-                  opacity: hoveredService === null || hoveredService === 10 ? 1 : 0.3
-                }}
-                whileHover={{ scale: 1.08 }}
-                onMouseEnter={() => setHoveredService(10)}
-                onMouseLeave={() => setHoveredService(null)}
-                className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
-              >
-                <img 
-                  src="/servicios/marketing.jpg"
-                  alt="Souvenires"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-white mb-6">Souvenires</h3>
-                  <ul className="space-y-3">
-                    <li className="text-gray-300 flex items-center">
-                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Tazas, llaveros, camisetas y bolsas personalizadas
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Artículos para eventos y promociones
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Regalos que fortalecen tu marca
                     </li>
                   </ul>
                 </div>
@@ -1319,7 +1319,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <span>Querétaro, Mexico<br />Calle 1 #234</span>
+                    <span>Santiago de Querétaro, México</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1333,8 +1333,8 @@ export default function Home() {
                     <svg className="h-5 w-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 7.89a2 2 0 002.82 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:info@itacacomunicacion.com" className="hover:text-green-400 transition">
-                      info@itacacomunicacion.com
+                    <a href="mailto:ecabello@itaca-mx.com" className="hover:text-green-400 transition">
+                      ecabello@itaca-mx.com
                     </a>
                   </li>
                 </ul>

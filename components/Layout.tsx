@@ -125,9 +125,9 @@ export default function Layout({ children, title = "ÍTACA - Comunicación Estra
             <div>
               <h4 className="text-lg font-bold mb-4 text-slate-200">Contacto</h4>
               <div className="space-y-2 text-slate-400 font-medium">
-                <p>📧 info@itacacomunicacion.com</p>
-                <p>📞 +57-123-456-7890</p>
-                <p>📍 Bogotá, Colombia</p>
+                <p>📧 ecabello@itaca-mx.com</p>
+                <p>📞 +52 442 186 7170</p>
+                <p>📍 Santiago de Querétaro, México</p>
               </div>
             </div>
           </div>

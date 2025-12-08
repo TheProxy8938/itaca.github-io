@@ -309,7 +309,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-gray-900">Email</h3>
-                      <p className="text-blue-600">info@itacacomunicacion.com</p>
+                      <p className="text-blue-600">ecabello@itaca-mx.com</p>
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm">

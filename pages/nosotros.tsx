@@ -196,11 +196,15 @@ export default function Nosotros() {
                       <div className="space-y-2 text-sm text-gray-600">
                         <div className="flex items-center">
                           <span className="text-blue-500 mr-2">📞</span>
-                          <span>442 186 7170</span>
+                          <span>+52 442 186 7170</span>
                         </div>
                         <div className="flex items-center">
                           <span className="text-green-500 mr-2">✉️</span>
-                          <span>ecabellof14@gmail.com</span>
+                          <span>ecabello@itaca-mx.com</span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-red-500 mr-2">📍</span>
+                          <span>Santiago de Querétaro, México</span>
                         </div>
                       </div>
                     </div>

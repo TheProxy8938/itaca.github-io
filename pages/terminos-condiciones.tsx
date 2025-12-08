@@ -169,7 +169,7 @@ const TerminosCondiciones = () => {
             </p>
             <div className="mt-4 p-4 bg-gray-50 rounded-lg">
               <p className="text-gray-700">
-                <strong>Email:</strong> info@itacacomunicacion.com<br />
+                <strong>Email:</strong> ecabello@itaca-mx.com<br />
                 <strong>Empresa:</strong> ÍTACA Comunicación Estratégica
               </p>
             </div>

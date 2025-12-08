@@ -37,6 +37,28 @@ const services = [
     ]
   },
   {
+    id: 'publicidad-impresa',
+    title: 'Publicidad Impresa',
+    description: 'Folletos, volantes, tarjetas de presentación, banners personalizados y producción con entrega rápida.',
+    image: '/servicios/publicidad-impresa.jpg',
+    features: [
+      'Folletos, volantes y tarjetas de presentación',
+      'Banners personalizados de alta calidad',
+      'Diseño y producción con entrega rápida'
+    ]
+  },
+  {
+    id: 'souvenires',
+    title: 'Souvenires',
+    description: 'Tazas, llaveros, camisetas y bolsas personalizadas, artículos para eventos y regalos que fortalecen tu marca.',
+    image: '/servicios/souvenires.jpg',
+    features: [
+      'Tazas, llaveros, camisetas y bolsas personalizadas',
+      'Artículos para eventos y promociones',
+      'Regalos que fortalecen tu marca'
+    ]
+  },
+  {
     id: 'audiovisual',
     title: 'Producción Audiovisual',
     description: 'Videos institucionales, fotografía corporativa y transmisiones en vivo profesionales.',
@@ -60,9 +82,9 @@ const services = [
   },
   {
     id: 'consultoria',
-    title: 'Consultoría Estratégica',
+    title: 'Consultoría',
     description: 'Talleres de comunicación efectiva, coaching para portavoces y desarrollo de manuales de comunicación.',
-    image: '/servicios/comunicacion.jpg',
+    image: '/servicios/consultoria.jpg',
     features: [
       'Talleres de comunicación efectiva',
       'Coaching para portavoces',
@@ -73,7 +95,7 @@ const services = [
     id: 'eventos',
     title: 'Eventos y Activaciones',
     description: 'Planificación y ejecución de eventos corporativos, activaciones de marca y campañas experienciales.',
-    image: '/servicios/comunicacion.jpg',
+    image: '/servicios/eventos.jpg',
     features: [
       'Planificación y ejecución de eventos corporativos',
       'Activaciones de marca y campañas experienciales',
@@ -84,7 +106,7 @@ const services = [
     id: 'institucional',
     title: 'Comunicación Institucional',
     description: 'Campañas de difusión para entidades públicas, gestión de imagen para funcionarios y transparencia.',
-    image: '/servicios/comunicacion.jpg',
+    image: '/servicios/institucional.jpg',
     features: [
       'Campañas de difusión para entidades públicas',
       'Gestión de imagen para funcionarios',
@@ -95,33 +117,11 @@ const services = [
     id: 'investigacion',
     title: 'Investigación y Análisis',
     description: 'Estudios de mercado, análisis de percepción y reputación, y monitorización de tendencias.',
-    image: '/servicios/comunicacion.jpg',
+    image: '/servicios/investigacion.jpg',
     features: [
       'Estudios de mercado y públicos objetivos',
       'Análisis de percepción y reputación',
       'Monitorización de tendencias y competencia'
-    ]
-  },
-  {
-    id: 'publicidad-impresa',
-    title: 'Publicidad Impresa',
-    description: 'Folletos, volantes, tarjetas de presentación, banners personalizados y producción con entrega rápida.',
-    image: '/servicios/diseño.jpg',
-    features: [
-      'Folletos, volantes y tarjetas de presentación',
-      'Banners personalizados de alta calidad',
-      'Diseño y producción con entrega rápida'
-    ]
-  },
-  {
-    id: 'souvenires',
-    title: 'Souvenires',
-    description: 'Tazas, llaveros, camisetas y bolsas personalizadas, artículos para eventos y regalos que fortalecen tu marca.',
-    image: '/servicios/marketing.jpg',
-    features: [
-      'Tazas, llaveros, camisetas y bolsas personalizadas',
-      'Artículos para eventos y promociones',
-      'Regalos que fortalecen tu marca'
     ]
   }
 ];
@@ -211,41 +211,98 @@ export default function Servicios() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.slice(0, 9).map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group hover:shadow-xl transition-shadow cursor-pointer"
+                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedService(service.id)}
               >
-                <div className="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
-                  <div className="text-white text-6xl">
-                    {service.id === 'comunicacion-estrategica' && '💼'}
-                    {service.id === 'marketing' && '📊'}
-                    {service.id === 'diseño' && '🎨'}
-                    {service.id === 'audiovisual' && '🎬'}
-                    {service.id === 'prensa' && '📰'}
-                    {service.id === 'consultoria' && '🎯'}
-                    {service.id === 'eventos' && '🎪'}
-                    {service.id === 'institucional' && '🏛️'}
-                    {service.id === 'investigacion' && '🔍'}
-                    {service.id === 'publicidad-impresa' && '📄'}
-                    {service.id === 'souvenires' && '🎁'}
+                <div className="h-48 relative overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-600/70 to-emerald-800/70 group-hover:from-green-600/50 group-hover:to-emerald-800/50 transition-all duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h3 className="text-2xl font-bold text-white text-center px-4">
+                      {service.title}
+                    </h3>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
                     {service.description}
                   </p>
-                  <div className="flex justify-end">
-                    <button className="text-blue-600 hover:text-blue-800 font-medium">
+                  <div className="border-t border-gray-200 pt-4">
+                    <p className="text-xs text-gray-500 font-semibold mb-2">Incluye:</p>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 2).map((feature, idx) => (
+                        <li key={idx} className="text-xs text-gray-600 flex items-start">
+                          <span className="text-green-500 mr-1">✓</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="flex justify-end mt-4">
+                    <button className="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                      Ver más →
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Contenedor centrado para los últimos 2 servicios */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+            {services.slice(9, 11).map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: (9 + index) * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedService(service.id)}
+              >
+                <div className="h-48 relative overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-600/70 to-emerald-800/70 group-hover:from-green-600/50 group-hover:to-emerald-800/50 transition-all duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h3 className="text-2xl font-bold text-white text-center px-4">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    {service.description}
+                  </p>
+                  <div className="border-t border-gray-200 pt-4">
+                    <p className="text-xs text-gray-500 font-semibold mb-2">Incluye:</p>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 2).map((feature, idx) => (
+                        <li key={idx} className="text-xs text-gray-600 flex items-start">
+                          <span className="text-green-500 mr-1">✓</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="flex justify-end mt-4">
+                    <button className="text-blue-600 hover:text-blue-800 font-medium text-sm">
                       Ver más →
                     </button>
                   </div>
@@ -271,26 +328,21 @@ export default function Servicios() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
-                    <div className="h-64 lg:h-auto bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
-                      <div className="text-white text-8xl">
-                        {service.id === 'comunicacion-estrategica' && '💼'}
-                        {service.id === 'marketing' && '📊'}
-                        {service.id === 'diseño' && '🎨'}
-                        {service.id === 'audiovisual' && '🎬'}
-                        {service.id === 'prensa' && '📰'}
-                        {service.id === 'consultoria' && '🎯'}
-                        {service.id === 'eventos' && '🎪'}
-                        {service.id === 'institucional' && '🏛️'}
-                        {service.id === 'investigacion' && '🔍'}
-                        {service.id === 'publicidad-impresa' && '📄'}
-                        {service.id === 'souvenires' && '🎁'}
+                    <div className="h-64 lg:h-auto relative overflow-hidden">
+                      <img 
+                        src={service.image}
+                        alt={service.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-600/60 to-emerald-800/60" />
+                      <div className="absolute inset-0 flex items-center justify-center p-8">
+                        <h3 className="text-4xl lg:text-5xl font-bold text-white text-center">
+                          {service.title}
+                        </h3>
                       </div>
                     </div>
                     
                     <div className="p-8">
-                      <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                        {service.title}
-                      </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                         {service.description}
                       </p>
