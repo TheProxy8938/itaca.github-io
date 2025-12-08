@@ -877,7 +877,7 @@ export default function Home() {
                 className="relative overflow-hidden rounded-xl p-8 transition-all duration-500 cursor-pointer"
               >
                 <img 
-                  src="/servicios/diseño.jpg"
+                  src="/servicios/diseno.jpg"
                   alt="Diseño y Branding"
                   className="absolute inset-0 w-full h-full object-cover"
                 />

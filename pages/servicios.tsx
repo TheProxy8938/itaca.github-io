@@ -26,10 +26,10 @@ const services = [
     ]
   },
   {
-    id: 'diseño',
+    id: 'diseno',
     title: 'Diseño y Branding',
     description: 'Desarrollo de identidad visual corporativa, diseño de logotipos y manuales de marca profesionales.',
-    image: '/servicios/diseño.jpg',
+    image: '/servicios/diseno.jpg',
     features: [
       'Desarrollo de identidad visual corporativa',
       'Diseño de logotipos y tipografías',
