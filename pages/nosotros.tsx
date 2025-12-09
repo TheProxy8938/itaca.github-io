@@ -105,8 +105,8 @@ export default function Nosotros() {
                   entendemos que cada empresa tiene su propio camino hacia el éxito.
                 </p>
                 <p>
-                  Durante estos años, hemos acompañado a más de 200 empresas en su transformación digital, 
-                  ayudándoles a construir marcas sólidas y a establecer conexiones genuinas con sus clientes.
+                  Durante estos años hemos acompañado a empresas ayudandoles a construir marcas
+                  solidas y a establecer conexiones genuinas con sus clientes
                 </p>
                 <p>
                   Nuestro enfoque se basa en la comprensión profunda de cada negocio, combinando estrategia, 
